@@ -25,8 +25,18 @@ public class Assignment {
         // Use a while loop to build a string that repeats the word
         // Words should be separated by single spaces
         // No trailing space at the end
-        return "test";
+        System.out.println("Give a a phrase to repeat?");
+        String phrase = scanner.nextLine();
 
+        System.out.println("Repeat how many times?");
+        int repeat = scanner.nextInt();
+
+            while (repeat > 1) {
+                System.out.print(phrase + " ");
+                repeat--;
+            }
+            System.out.print(phrase);
+        return "";
     
     }
     

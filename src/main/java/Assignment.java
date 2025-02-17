@@ -54,11 +54,24 @@ public class Assignment {
         // - Outer loop for each row
         // - Inner loop to repeat the number
         // Use \n for newlines
+        System.out.println("What's the maximum height of this pyramid?" );
+        maxNumber = scanner.nextInt();
+        int inner = 1;      //inner loop num
+
+        while (inner <= maxNumber) {
+            int digits = 1;
+
+            while (digits <= inner) {
+                System.out.print(inner+ " ");   //repeating same num
+                digits++;       //readies next row digit
+            }
+            System.out.print("\n");
+            inner++;
+            
+        }
+       
         return "";
     }
-    
- 
-    
     
     /**
      * Exercise 3: Counting Game

@@ -26,16 +26,16 @@ public class Assignment {
         // Words should be separated by single spaces
         // No trailing space at the end
         System.out.println("Give a a phrase to repeat?");
-        String phrase = scanner.nextLine();
+        word = scanner.nextLine();
 
         System.out.println("Repeat how many times?");
-        int repeat = scanner.nextInt();
+        times = scanner.nextInt();
 
-            while (repeat > 1) {
-                System.out.print(phrase + " ");
-                repeat--;
+            while (times > 1) {
+                System.out.print(word + " ");
+                times--;
             }
-            System.out.print(phrase);
+            System.out.print(word);
         return "";
     
     }
@@ -54,16 +54,16 @@ public class Assignment {
         // - Outer loop for each row
         // - Inner loop to repeat the number
         // Use \n for newlines
-        System.out.println("What's the maximum height of this pyramid?" );
+        System.out.println("What's the height of this pyramid?" );
         maxNumber = scanner.nextInt();
-        int inner = 1;      //inner loop num
+        int inner = 1;     
 
         while (inner <= maxNumber) {
             int digits = 1;
 
             while (digits <= inner) {
-                System.out.print(inner+ " ");   //repeating same num
-                digits++;       //readies next row digit
+                System.out.print(inner+ " ");   
+                digits++;       
             }
             System.out.print("\n");
             inner++;

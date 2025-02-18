@@ -67,7 +67,7 @@ public class Assignment {
             }
             System.out.print("\n");
             inner++;
-            
+
         }
        
         return "";
@@ -87,7 +87,34 @@ public class Assignment {
         // Use string concatenation
         // Numbers/words should be separated by spaces
         // No trailing space at the end
+
+        System.out.println("How high do you wish to count?");
+        maxNumber = scanner.nextInt();
+        int count = 1;
+
+        while (count <= maxNumber) {
+            if (count % 15 == 0) {
+                System.out.print("FizzBuzz" + " ");
+                count++;
+                
+            }
+            else if (count % 5 == 0) {
+                System.out.print("Buzz" + " ");
+                count++;
+                
+            }
+            else if (count % 3 == 0 ) {
+                System.out.print("Fizz" + " ");
+                count++;    
+            }
+            else {
+                System.out.print(count + " ");
+                count++;
+            }
+           
+        }
         return "";
+
     }
     
   

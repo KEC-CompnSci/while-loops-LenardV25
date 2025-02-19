@@ -26,22 +26,15 @@ public class Assignment {
         // Words should be separated by single spaces
         // No trailing space at the end
 
-        //System.out.println("Give a a phrase to repeat?");
-        //word = scanner.nextLine();
-
-        //System.out.println("Repeat how many times?");
-        //times = scanner.nextInt();
         String sentence = word;
         if (times == 0 ) {
             return "";
         }
         while (times > 1) {
-            //System.out.print(word + " ");
             sentence = sentence + " " + word;
             times--;
         }
         return sentence;
-    
     }
     
     /**
@@ -58,25 +51,42 @@ public class Assignment {
         // - Outer loop for each row
         // - Inner loop to repeat the number
         // Use \n for newlines
+        
         //System.out.println("What's the height of this pyramid?" );
         //maxNumber = scanner.nextInt();
         int inner = 1;     
         int inside = 1 ;
+        //String print = Integer.toString(inside);
+        //1
+        //22
+        //333
+        
+        int first = 1;
+        
+        while (inner <= maxNumber ) {
+            String print = Integer.toString(inside);
+            while (first <= inner) {
+                first++;
+                inside++;
+                return print;
+            }
+            inner++;
+            return "\n";
+        }
+        
 
 
         while (inner <= maxNumber) {
             int digits = 1;
 
             while (digits <= inner) {
-                //System.out.print(inner+ " ");
-                inside = inner;
+                System.out.print(inner+ " ");
                 digits++;
-
             }
             System.out.print("\n");
             inner++;
-
         }
+        return "";
     }
     
     /**
@@ -130,6 +140,7 @@ public class Assignment {
             }
         count++;
         }
+        return "";
         
 
     }

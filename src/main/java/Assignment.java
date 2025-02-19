@@ -25,18 +25,22 @@ public class Assignment {
         // Use a while loop to build a string that repeats the word
         // Words should be separated by single spaces
         // No trailing space at the end
-        System.out.println("Give a a phrase to repeat?");
-        word = scanner.nextLine();
 
-        System.out.println("Repeat how many times?");
-        times = scanner.nextInt();
+        //System.out.println("Give a a phrase to repeat?");
+        //word = scanner.nextLine();
 
-            while (times > 1) {
-                System.out.print(word + " ");
-                times--;
-            }
-            System.out.print(word);
-        return "";
+        //System.out.println("Repeat how many times?");
+        //times = scanner.nextInt();
+        String sentence = word;
+        if (times == 0 ) {
+            return "";
+        }
+        while (times > 1) {
+            //System.out.print(word + " ");
+            sentence = sentence + " " + word;
+            times--;
+        }
+        return sentence;
     
     }
     
@@ -54,23 +58,25 @@ public class Assignment {
         // - Outer loop for each row
         // - Inner loop to repeat the number
         // Use \n for newlines
-        System.out.println("What's the height of this pyramid?" );
-        maxNumber = scanner.nextInt();
+        //System.out.println("What's the height of this pyramid?" );
+        //maxNumber = scanner.nextInt();
         int inner = 1;     
+        int inside = 1 ;
+
 
         while (inner <= maxNumber) {
             int digits = 1;
 
             while (digits <= inner) {
-                System.out.print(inner+ " ");   
-                digits++;       
+                //System.out.print(inner+ " ");
+                inside = inner;
+                digits++;
+
             }
             System.out.print("\n");
             inner++;
 
         }
-       
-        return "";
     }
     
     /**
@@ -88,32 +94,43 @@ public class Assignment {
         // Numbers/words should be separated by spaces
         // No trailing space at the end
 
-        System.out.println("How high do you wish to count?");
-        maxNumber = scanner.nextInt();
+        //System.out.println("How high do you wish to count?");
+        //maxNumber = scanner.nextInt();
         int count = 1;
+        
+        String both = "FizzBuzz";
+        String buzz = "Buzz";
+        String fizz = "Fizz";
+
 
         while (count <= maxNumber) {
             if (count % 15 == 0) {
-                System.out.print("FizzBuzz" + " ");
+                //System.out.print("FizzBuzz" + " ");
                 count++;
+                return both + " ";
                 
             }
             else if (count % 5 == 0) {
-                System.out.print("Buzz" + " ");
+                //System.out.print("Buzz" + " ");
                 count++;
-                
+                return buzz + " ";
+
             }
             else if (count % 3 == 0 ) {
-                System.out.print("Fizz" + " ");
+                //System.out.print("Fizz" + " ");
                 count++;    
+                return fizz + " ";
+
             }
             else {
-                System.out.print(count + " ");
+                //System.out.print(count + " ");
                 count++;
+                 
+
             }
-           
+        count++;
         }
-        return "";
+        
 
     }
     

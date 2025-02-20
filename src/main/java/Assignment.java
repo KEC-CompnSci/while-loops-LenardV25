@@ -27,10 +27,10 @@ public class Assignment {
         // No trailing space at the end
 
         String sentence = word;
+
         if (times == 0 ) {
             return "";
-        }
-        while (times > 1) {
+        } while (times > 1) {
             sentence = sentence + " " + word;
             times--;
         }
@@ -51,42 +51,23 @@ public class Assignment {
         // - Outer loop for each row
         // - Inner loop to repeat the number
         // Use \n for newlines
-        
-        //System.out.println("What's the height of this pyramid?" );
-        //maxNumber = scanner.nextInt();
         int inner = 1;     
-        int inside = 1 ;
-        //String print = Integer.toString(inside);
-        //1
-        //22
-        //333
-        
-        int first = 1;
-        
+        String pyramid = "";
+
         while (inner <= maxNumber ) {
-            String print = Integer.toString(inside);
+            int first = 1;
+
             while (first <= inner) {
+                pyramid = pyramid + inner;
                 first++;
-                inside++;
-                return print;
+            
             }
+
+            pyramid += "\n";
             inner++;
-            return "\n";
         }
+        return pyramid;
         
-
-
-        while (inner <= maxNumber) {
-            int digits = 1;
-
-            while (digits <= inner) {
-                System.out.print(inner+ " ");
-                digits++;
-            }
-            System.out.print("\n");
-            inner++;
-        }
-        return "";
     }
     
     /**
@@ -104,43 +85,30 @@ public class Assignment {
         // Numbers/words should be separated by spaces
         // No trailing space at the end
 
-        //System.out.println("How high do you wish to count?");
-        //maxNumber = scanner.nextInt();
         int count = 1;
-        
-        String both = "FizzBuzz";
-        String buzz = "Buzz";
-        String fizz = "Fizz";
-
+        String result = "";
 
         while (count <= maxNumber) {
             if (count % 15 == 0) {
-                //System.out.print("FizzBuzz" + " ");
-                count++;
-                return both + " ";
-                
-            }
-            else if (count % 5 == 0) {
-                //System.out.print("Buzz" + " ");
-                count++;
-                return buzz + " ";
+                result = result + "FizzBuzz";
+
+            } else if (count % 5 == 0) {
+                result = result + "Buzz";
+
+            } else if (count % 3 == 0 ) {
+                result = result + "Fizz";
+
+            } else {
+               result = result + count;
 
             }
-            else if (count % 3 == 0 ) {
-                //System.out.print("Fizz" + " ");
-                count++;    
-                return fizz + " ";
-
-            }
-            else {
-                //System.out.print(count + " ");
-                count++;
-                 
+            if (count < maxNumber) {
+                result = result + " ";
 
             }
         count++;
         }
-        return "";
+        return result;
         
 
     }
